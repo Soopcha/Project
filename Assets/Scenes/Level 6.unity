@@ -1417,10 +1417,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b619a49fba8f19f439bd5b2dfb861860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovingForward: 273
-  MovingBack: 274
-  MovingRight: 276
-  MovingLeft: 275
+  MovingForward: 119
+  MovingBack: 115
+  MovingRight: 97
+  MovingLeft: 100
   MovingDirectionForwardBack: {x: 0, y: 0, z: 1}
   MovingDirectionRightLeft: {x: 1, y: 0, z: 0}
 --- !u!54 &871863544
