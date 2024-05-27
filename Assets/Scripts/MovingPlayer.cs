@@ -35,9 +35,20 @@ public class MovingPlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         if (this.CompareTag("Player") && other.CompareTag("Finish"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            if (currentSceneIndex < SceneManager.sceneCountInBuildSettings - 1)
+            {
+                // Загрузить следующую сцену
+                SceneManager.LoadScene(currentSceneIndex + 1);
+            }
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else if (this.CompareTag("Player") && other.CompareTag("Respawn"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
